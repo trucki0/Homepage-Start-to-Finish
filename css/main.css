@@ -548,6 +548,17 @@ h2 {
   -webkit-transition: all ease-in-out 250ms;
   -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms; }
+  @media (min-width: 725px) {
+    .main-nav {
+      position: relative;
+      -webkit-box-flex: 1;
+      -webkit-flex: auto;
+      -ms-flex: auto;
+      flex: auto;
+      background: none;
+      margin-top: 1em;
+      margin-left: 2em;
+      left: 0; } }
   .main-nav ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -562,6 +573,14 @@ h2 {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     height: 100vh; }
+    @media (min-width: 725px) {
+      .main-nav ul {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        height: auto; } }
   .main-nav li {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -572,6 +591,11 @@ h2 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+    @media (min-width: 725px) {
+      .main-nav li {
+        display: inline-block;
+        border: none;
+        text-align: right; } }
   .main-nav a {
     color: white;
     text-decoration: none;
@@ -590,8 +614,15 @@ h2 {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    @media (min-width: 725px) {
+      .main-nav a {
+        display: inline; } }
     .main-nav a:hover {
       background: rgba(0, 0, 0, 0.1); }
+      @media (min-width: 725px) {
+        .main-nav a:hover {
+          background: none;
+          color: #8e1047; } }
   .main-nav.is-open {
     left: 0; }
 
@@ -602,6 +633,9 @@ h2 {
   right: 1em;
   top: 1em;
   cursor: pointer; }
+  @media (min-width: 725px) {
+    .nav-toggle {
+      display: none; } }
 
 .hamburger, .hamburger::before, .hamburger::after {
   content: '';
@@ -730,12 +764,14 @@ footer {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  width: 80%;
   margin: 0 auto; }
 
 a {
   text-decoration: none;
   font-weight: 700; }
+
+.container--footer {
+  max-width: 25em; }
 
 .btn {
   display: inline-block;
